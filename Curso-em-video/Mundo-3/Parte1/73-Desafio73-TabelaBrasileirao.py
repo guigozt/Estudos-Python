@@ -16,9 +16,6 @@ def main():
     print(f'Times em ordem Alfabetica: {tabelaA}')
     print('='*20)
 
-    for i, t in enumerate(tabela):
-        i += 1
-        if i == 13:
-            print(f'O {t} está na {i}º posição')
+    print(f'O Flumisense está na {tabela.index("Fluminense")+1}ª posição')
 
 main()
