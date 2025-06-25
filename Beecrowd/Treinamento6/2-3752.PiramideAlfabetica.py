@@ -1,18 +1,17 @@
 def piramide(q, t):
-    if q == 'maiusculas':
-        alfabeto = 'abcdefghijklmnopqrstuvwxyz'
-    else:
+    if t == 'maisculas':
         alfabeto = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    else:
+        alfabeto = 'abcdefghijklmnopqrstuvwxyz'
 
-    for i in range(1, q+1):     
-        letras = alfabeto[ : i] #Vai pegar cada letra: a -> b -> c...
-        pontos = '.' * (26 - i) #Ex: 26 - 2: vai imprimir 24 '.' 
-        linha = pontos + letras #Ex: 24 pontos + 2 letras (no final)
+    for i in range(1, q+1):
+        letras = alfabeto[:i]
+        pontos = '.' * (26 - i)
+        linha = pontos + letras
         print(linha)
-        
 
 def main():
-    qtdLetras, tipo = input().split()
+    qtdLetras, tipo = input('Quantidade e tipo das letras: ').split()
     qtdLetras = int(qtdLetras)
 
     piramide(qtdLetras, tipo)
