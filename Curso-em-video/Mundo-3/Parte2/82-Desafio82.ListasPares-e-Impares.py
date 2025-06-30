@@ -4,8 +4,7 @@ def main():
     listaImpares = []
 
     while True:
-        valor = int(input('Digite um valor: '))
-        lista.append(valor)
+        lista.append(int(input('Digite um valor: ')))
         op = input('Deseja continuar? [S/N] ').strip().lower()
 
         if op != 's':

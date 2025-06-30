@@ -16,9 +16,6 @@ def main():
     if 5 in lista:
         print('O valor 5 faz parte da lista!')
     else:
-        print('O valor 5 não faz parte da lista!')
-       
+        print('O valor 5 NÃO faz parte da lista!')
         
-        
-
 main()

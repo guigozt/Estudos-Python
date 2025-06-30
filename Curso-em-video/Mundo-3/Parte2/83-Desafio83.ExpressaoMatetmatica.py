@@ -1,20 +1,20 @@
 def main():
-    expressao = input('Expressão: ')
-    cont = 0
+    exp = input('Digite uma expressão: ')
+    pilha = list() #Armazena os parenteses
 
-    for caractere in expressao:
-        if caractere == '(':
-            cont += 1
-        elif caractere == ')':
-            cont -= 1
+    for simbolo in exp:
+        if simbolo == '(':
+            pilha.append('(') #Adiciona na pilha -> ['(']
+        elif simbolo == ')':
+            if len(pilha) > 0: #Verifica se tem '(' na pilha
+                pilha.pop() #Remove o seu "par"
+            else:
+                pilha.append(')') #Se a pilha estiver vazia, significa que há um ')' sem um '(' correspondente
+                break
 
-            if cont < 0: #Se tentar fechar sem abrir ")("
-                print('Expressão inválida!')
-                return
-
-    if cont == 0:
-        print('Expressao válida!')
+    if len(pilha) == 0:
+        print('Expressão válida')
     else:
-        print('Expressao inválida')
+        print('Expressão inválida')
 
 main()
