@@ -1,5 +1,6 @@
 def main():
     matriz = []
+    soma = 0
 
     for L in range(3): #Linhas
         novaLinha = [] #Guarda os valores de cada linha
@@ -14,15 +15,13 @@ def main():
     for linha in matriz:
         for valor in linha: #Acessa cada valor da linha, ideial para formatar
             print(f'[{valor:^5}]', end='')
+
+            if valor % 2 == 0:
+                soma += valor
+                 
         print() #Pula linha
 
     print('-' * 20)
-
-    soma = 0
-    for linha in matriz:
-        for valor in linha:
-            if valor % 2 == 0:
-                soma += valor
                 
     print(f'A soma dos valores pares é de: {soma} ')
 
@@ -35,5 +34,4 @@ def main():
     maior = max(matriz[1])
     print(f'O maior valor da segunda linha é: {maior}')
 
-    
 main()

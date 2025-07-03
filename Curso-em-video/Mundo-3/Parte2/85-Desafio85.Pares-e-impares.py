@@ -5,9 +5,9 @@ def main():
         valor = int(input(f'{i}º Valor: '))
 
         if valor % 2 == 0:
-            lista[0].append(valor)
+            lista[0].append(valor) #Envia para a sublista de pares
         else:
-            lista[1].append(valor)
+            lista[1].append(valor) #Envia para a sublista de impares
 
     lista[0].sort()
     lista[1].sort()
