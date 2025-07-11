@@ -1,16 +1,16 @@
 def main():
     aluno = {}
-    
-    aluno['nome'] = input('Nome: ')
-    aluno['media'] = float(input(f'Media de {aluno["nome"]}: '))
+
+    aluno['nome'] = input('Nome do aluno: ')
+    aluno['media'] = float(input(f'Média de {aluno["nome"]}: '))
     if aluno['media'] > 5:
-        aluno['situacao'] = 'Aprovado(a)'
+        aluno['situacao'] = 'Aprovado'
     else:
-        aluno['situacao'] = 'Reprovado(a)'
-    
+        aluno['situacao'] = 'Reprovado'
+
     print('-' * 20)
-    
-    print(f'O aluno {aluno["nome"]} tem a média de {aluno["media"]:.2f}')
+
+    print(f'O aluno {aluno["nome"]} tem a média de {aluno["media"]}')
     print(f'Situação: {aluno["situacao"]}')
-    
+
 main()
