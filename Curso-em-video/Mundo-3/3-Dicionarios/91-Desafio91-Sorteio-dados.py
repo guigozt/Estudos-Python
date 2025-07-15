@@ -1,5 +1,6 @@
 from random import randint
 from time import sleep
+#from operator import itemgetter -> Serie a key para pegar o valor como base na hora de organizar -> Usaria o sorted(jogador.items(), key=itemgetter(1), reverse=True)
 
 def main():
     ranking = list()   #Lista para guardar os dicionarios
