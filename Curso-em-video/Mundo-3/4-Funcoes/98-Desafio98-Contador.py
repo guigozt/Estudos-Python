@@ -10,10 +10,12 @@ def contador(inicio, fim, passo):
 
     print(f'CONTAGEM DE {inicio} ATÉ {fim} -> DE {passo} EM {passo}: ')
 
-    if inicio < fim:
+    #Incio menor que fim (crescente)
+    if inicio <= fim:
         for i in range(inicio, fim+1, abs(passo)): #abs para o passo não ser negativo 
             print(i, end=' ', flush=True) #flush=True -> força o print() a mostrar o número imediatamente (sem esperar o buffer)
             sleep(0.2)
+    #Inicio maior que fim (decrescente)
     else:
         for i in range(inicio, fim+1, -abs(passo)):
             print(i, end=' ', flush=True)

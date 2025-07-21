@@ -2,25 +2,26 @@ from random import randint
 from time import sleep
 
 def geraLista():
-    L = [randint(1, 10) for _ in range(5)]
+    L = [randint(1, 10) for _ in range(5)] #Outra forma: for i in range(5): -> ->L.append(randint(1, 10))
     return L
 
-def imprimeNumeros(* numeros):
-    qtdNumeros = len(numeros)
+def imprimeNumeros(L):
+    qtdNumeros = len(L)
     print(f'Sorteando {qtdNumeros} números da lista: ', end=' ')
 
-    for i, valor in enumerate(numeros):
+    for valor in L:
         print(valor, end=' ', flush=True)
         sleep(0.4)
 
-def somaPar(* numeros):
-    somaPares = sum(valor for i, valor in enumerate(numeros) if valor % 2 == 0)
+def somaPar(L):
+    #Para cada valor iem L -> Se valor for par -> Retorna valor -> Soma entre eles
+    somaPares = sum(valor for valor in L if valor % 2 == 0)
 
-    print(f'\nSomando os valores pares de {numeros}, temos: {somaPares}')
+    print(f'\nSomando os valores pares de {L}, temos: {somaPares}')
 
 def main():
     lista = geraLista()
-    imprimeNumeros(* lista)
-    somaPar(* lista)
+    imprimeNumeros(lista)
+    somaPar(lista)
 
 main()
