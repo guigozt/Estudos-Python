@@ -1,6 +1,6 @@
 from time import sleep
 
-def cor(texto, cor='verde'):
+def cor(texto, cor='verde'): #Definição de cores, padrão da cor é verde
     cores={
         'vermelho': '\033[31m',
         'verde': '\033[32m',
@@ -13,16 +13,19 @@ def cor(texto, cor='verde'):
     }
     return f'{cores.get(cor, '')}{texto}{cores['reset']}'
 
+#--------------------------------------------------------------------------
 def encerraPrograma():
-    print('=' * 36)
+    print(cor('=' * 36, 'vermelho'))
     print(cor('ENCERRANDO... OBRIGADO E VOLTE SEMPRE!', 'vermelho'))
-    print('=' * 36)
+    print(cor('=' * 36, 'vermelho'))
 
+#--------------------------------------------------------------------------
 def sistemaAjuda():
     print(cor('~' * 36, 'azul'))
     print(cor('SISTEMA DE AJUDA PYHELP'.center(36), 'negrito'))
     print(cor('~' * 36, 'azul'))
 
+# -------------------------------------------------------------------------
 def sistemaHelp(comando):
     print(cor(f'Acessando o manual do comando "{comando}"...', 'amarelo'))
     sleep(1)
@@ -33,16 +36,16 @@ def sistemaHelp(comando):
 
 def main():
     while True:
-        sistemaAjuda()
+        sistemaAjuda() #Titulo do programa
         resposta = input(cor('Função ou Biblioteca ("fim" para encerrar) > ', 'ciano')).strip().lower()
 
         if resposta == 'fim':
-            encerraPrograma()
+            encerraPrograma() #Mensagem de encerramento
             break
-        elif resposta == '':
+        elif resposta == '': #Se o input for vazio
             print(cor('[ERRO] Nenhum comando digitado!', 'vermelho'))
-            continue
+            continue #O programa retorna lá pro while
         else:
-            sistemaHelp(resposta)
+            sistemaHelp(resposta) #Chama a função de help
 
 main()

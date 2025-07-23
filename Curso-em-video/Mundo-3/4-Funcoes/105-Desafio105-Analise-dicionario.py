@@ -1,9 +1,9 @@
-from statistics import mean
-
 def notas(* nt, sit=False): #Recebe várias notas, para desempacotalas
+    from statistics import mean
 
     if not nt:
         return {'ERRO: Nenhuma nota foi inserida!'}
+    
     dicionario = {
         'Total': len(nt),
         'Maior': max(nt),

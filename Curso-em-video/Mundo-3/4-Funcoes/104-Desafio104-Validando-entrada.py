@@ -1,10 +1,10 @@
 def leiaInt(mensagem):
     while True:
-        valor = input(mensagem).strip() #Input contem a mensagem na chamada do main, e valor recebe
-        if valor.isdigit(): #Verifica se o valor passado é um número. Ex: 123 -> True | '123' -> True | '123abc' -> False | -123 -> False 
+        valor = input(mensagem) #Input contem a mensagem na chamada do main, e valor recebe
+        if valor.isnumeric(): #Verifica se o valor passado é um número. Ex: 123 -> True | '123' -> True | '123abc' -> False | -123 -> False 
             return valor
         else:
-            print('[ERRO] Digite um número inteiro válido')
+            print('\033[0;31m[ERRO] Digite um número inteiro válido\033[m')
 
 def main():
     n = leiaInt('Digite um número: ')
