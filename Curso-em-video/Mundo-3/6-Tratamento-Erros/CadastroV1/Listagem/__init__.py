@@ -1,4 +1,4 @@
-from Cadastro import Cores
+from CadastroV1 import Cores
 
 def listar(cadastro):
     print('-' * 30)

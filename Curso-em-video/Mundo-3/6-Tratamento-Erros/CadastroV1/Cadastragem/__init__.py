@@ -1,4 +1,4 @@
-from Cadastro import Cores
+from CadastroV1 import Cores
 erros = {
         ValueError: '[ERRO] Digite um número inteiro válido',
         KeyboardInterrupt: '[ERRO] Entrada cancelada pelo usuário',

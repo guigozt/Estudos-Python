@@ -1,4 +1,4 @@
-from Cadastro import Cores
+from CadastroV2 import Cores
 
 def sair():
     print('=' * 30)

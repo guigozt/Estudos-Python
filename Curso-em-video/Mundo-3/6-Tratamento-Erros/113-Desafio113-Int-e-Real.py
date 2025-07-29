@@ -2,8 +2,13 @@ def leiaInt(mensagem):
     while True:
         try:
             valor = int(input(mensagem))
-        except:
+
+        except (ValueError, TypeError):
             print('\033[31mERRO! Por favor digite um número inteiro válido\033[m')
+            continue #Volta pro começo do laço
+        except(KeyboardInterrupt):
+            print('\033[31m\nEntrada de dados foi interrompida pelo usuário!\033[m')
+            return 0
         else:
             return valor
         
@@ -11,12 +16,12 @@ def leiaFloat(mensagem):
     while True:
         try:
             valor = float(input(mensagem))
-        except KeyboardInterrupt:
-            print(('\033[34m\nO usuário preferiu não digitar esse número\033[m'))
-            valor = 0
-            return valor
-        except:
-            print('\033[34mERRO! Por favor digite um número inteiro válido\033[m')
+        except (ValueError, TypeError):
+            print('\033[31mERRO! Por favor digite um número inteiro válido\033[m')
+            continue 
+        except(KeyboardInterrupt):
+            print('\033[31m\nEntrada de dados foi interrompida pelo usuário!\033[m')
+            return 0
         else:
             return valor
 

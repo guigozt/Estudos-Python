@@ -1,4 +1,4 @@
-from Cadastro import Cadastragem, Listagem, Encerramento, Menu, Cores #Importações de Pacotes
+from CadastroV1 import Cadastragem, Listagem, Encerramento, Menu, Cores #Importações de Pacotes
 import os #Usado para verificar existencia de algum arquivo
 arquivo = 'cadastro.txt' #Nome do arquivo que será gerado
 
