@@ -33,3 +33,7 @@
 <p align="left">☑Cisco Network Academy - Fundamentos do Python: https://www.netacad.com/</p>
 
 ###
+
+<p align="left">☑CFB Cursos - Curso de Python: https://youtube.com/playlist?list=PLx4x_zx8csUhuVgWfy7keQQAy7t1J35TR&si=U0cwRcuJBIjkQWdF </p>
+
+###
