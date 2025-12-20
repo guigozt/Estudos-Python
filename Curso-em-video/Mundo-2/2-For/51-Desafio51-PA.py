@@ -6,5 +6,5 @@ def main():
     for _ in range(limite):
         print(f'{primeiroTermo}', end=' ')
         primeiroTermo += razao
-
+    
 main()
