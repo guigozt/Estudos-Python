@@ -1,4 +1,7 @@
 def ehprimo(num):
+    if num < 2:
+        return False
+    
     if num % 2 == 0:
         return num == 2
 

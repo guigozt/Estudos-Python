@@ -1,22 +1,22 @@
+def ehPalindromo(fraseComp):
+    tamanho = len(fraseComp)
+    
+    for i in range(tamanho // 2):
+        if fraseComp[i] != fraseComp[(tamanho - 1) - i]:
+            return False
+    return True
+
 def main():
-    frase = input('Frase (Detector de Palindromo): ').strip(' ')
+    frase = input('Frase (Detector de Palindromo): ').lower().strip(' ')
     print('Frase original: ', frase)
 
-    fraseCompleta = ''    
-    for palavra in frase:
-        if palavra != ' ':
-            fraseCompleta += palavra
+    fraseCompleta = ''
+    for i in frase:
+        if i != ' ':
+            fraseCompleta += i
 
-    tamanho = len(fraseCompleta)
-    ehpalindromo = True
-
-    for i in range(tamanho // 2):
-        if fraseCompleta[i] != fraseCompleta[(tamanho - 1) - i]:
-            ehpalindromo = False
-            break
-    
-    if ehpalindromo:
-        print('É PALINDROMO')
+    if ehPalindromo(fraseCompleta):
+        print('É PALINDROMO!')
     else:
         print('NÃO É PALINDROMO...')
 

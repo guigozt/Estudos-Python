@@ -1,9 +1,9 @@
 from time import sleep
 
 def main():
-    for i in range(1, 10+1):
+    for i in range(10, 0, -1):
         print('Contagem... ', i)
-        sleep(1)  
+        sleep(0.5)  
     print('O estouro dos fogos de artificio começou!!')
 
 main()

@@ -4,7 +4,9 @@ def main():
     limite = 10
 
     for _ in range(limite):
-        print(f'{primeiroTermo}', end=' ')
+        print(f'{primeiroTermo}', end=' -> ')
         primeiroTermo += razao
+    
+    print('Acabou...')
     
 main()
