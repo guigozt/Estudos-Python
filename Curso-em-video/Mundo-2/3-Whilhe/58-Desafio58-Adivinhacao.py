@@ -11,12 +11,10 @@ def main():
         tentativa = int(input('Tente adivinhar o número pensado pela máquina (1 - 100): '))
         qtdTentativa += 1
 
-        if tentativa != numeroGerado:
-            print('Você errou, tente novamente...')
-            continue
-        else:
+        if tentativa == numeroGerado:
             print(f'\nParabéns! Você acertou em {qtdTentativa} tentativas')
             break
+        print('Você errou, tente novamente...')
     
     print('-' * 19)
 
