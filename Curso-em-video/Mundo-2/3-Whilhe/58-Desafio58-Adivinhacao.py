@@ -8,7 +8,7 @@ def main():
     print('-' * 19)
 
     while True:
-        tentativa = int(input('Tente adivinhar o número pensado pela máquina (1 - 100): '))
+        tentativa = int(input('Tente adivinhar o número pensado pela máquina (1 - 10): '))
         qtdTentativa += 1
 
         if tentativa == numeroGerado:

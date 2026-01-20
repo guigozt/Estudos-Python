@@ -1,20 +1,21 @@
 def main():
-    termo = int(input('Número da Sequência: '))
-
+    termo = int(input('Quantos termos quer mostrar?: '))
+    
     primeiro = 0
     segundo = 1
-    cont = 0
+
+    contador = 0
 
     print('SEQUÊNCIA FIBONACCI')
     print('-' * 19)
 
-    while cont < termo:
+    while contador < termo:
         print(primeiro, end=' ')
 
         atual = primeiro + segundo
         primeiro = segundo
         segundo = atual
 
-        cont += 1
+        contador += 1
     
-main()    
+main()

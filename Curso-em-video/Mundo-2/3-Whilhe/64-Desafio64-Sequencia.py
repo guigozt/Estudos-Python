@@ -7,6 +7,7 @@ def main():
 
         if numero == 999:
             break
+        
         qtdNumeros += 1
         somaNumeros += numero
 

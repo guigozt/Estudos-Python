@@ -34,7 +34,6 @@ def main():
             if opcao in '12345':
                 opcao = int(opcao)
                 break
-            
             print('Opção inválida, tente novamente...')
 
         if opcao == 1:
@@ -48,7 +47,7 @@ def main():
             num1, num2 = lerValores()
             continue
         else:
-            print('Obrigado por utilizar o programa')
+            print('\nObrigado por utilizar o programa')
             print('Saindo...')
             break 
 

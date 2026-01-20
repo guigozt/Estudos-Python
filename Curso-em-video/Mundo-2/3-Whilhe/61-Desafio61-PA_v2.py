@@ -6,8 +6,10 @@ def main():
     contador = 0
 
     while contador < 10:
-        print(pa, end=' -> ' if contador < 9 else ' ')
+        print(pa, end=' -> ')
         pa += razao
         contador += 1
+
+    print('FIM...')
 
 main()
